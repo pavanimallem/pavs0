@@ -1,9 +1,16 @@
 n=int(raw_input())
-m=[int(x) for x in raw_input().split()]
-m.sort
-for i in range(0,n):
-    for j in range(i+1,n):
-        if(m[i]+m[j]==0):
-            print m[i],m[j]
+a=[int(x) for x in raw_input().split()]
+a.sort()
+i=0;j=n-1
+min=9999
+while i<j:
+    if min>abs(a[i]+a[j]):
+        min=abs(a[i]+a[j])
+        x=a[i]
+        y=a[j]
+    if a[i]+a[j]<0:
+        i+=1
     else:
-       print 0
+        j-=1
+    
+print x,y
