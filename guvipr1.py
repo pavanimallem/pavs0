@@ -1,3 +1,4 @@
+n=raw_input()
 s=raw_input()
 s1=raw_input()
 l=[]
